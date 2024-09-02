@@ -1,0 +1,66 @@
+{
+  "Version": "1.3",
+  "ID": "f1u7ubbl4ehozhjosfx76tqd2jzlldxk447wvicpy",
+  "Issue Number": "1",
+  "Client": {
+    "Name": "test",
+    "Region": "Afghanistan",
+    "Industry": "Life Science / Healthcare",
+    "Website": "test",
+    "Social Media": "test",
+    "Social Media Type": "Slack",
+    "Role": "Dataset Owner"
+  },
+  "Project": {
+    "Brief history of your project and organization": "test",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "test",
+    "Where was the data currently stored in this dataset sourced from": "AWS Cloud",
+    "How do you plan to prepare the dataset": "test",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "test",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[X] I confirm",
+    "What is the expected retrieval frequency for this data": "Daily",
+    "For how long do you plan to keep this dataset stored on Filecoin": "Less than 1 year",
+    "In which geographies do you plan on making storage deals": "Greater China",
+    "How will you be distributing your data to storage providers": "Cloud storage (i.e. S3)",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "test",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "1TiB",
+    "Single Size Dataset": "1TiB",
+    "Replicas": 4,
+    "Weekly Allocation": "1TiB"
+  },
+  "Lifecycle": {
+    "State": "Granted",
+    "Validated At": "2024-09-02 12:25:38.930592494 UTC",
+    "Validated By": "stcloudlisa",
+    "Active": true,
+    "Updated At": "2024-09-02 12:40:17.546559104 UTC",
+    "Active Request ID": "f928c6f1-1fb3-4c79-9eb2-91cb024751a4",
+    "On Chain Address": "f1u7ubbl4ehozhjosfx76tqd2jzlldxk447wvicpy",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": [
+    {
+      "ID": "f928c6f1-1fb3-4c79-9eb2-91cb024751a4",
+      "Request Type": "First",
+      "Created At": "2024-09-02 12:25:38.930606963 UTC",
+      "Updated At": "2024-09-02 12:25:38.930608843 UTC",
+      "Active": false,
+      "Allocation Amount": "1TiB",
+      "Signers": [
+        {
+          "Github Username": "stcloudlisa",
+          "Signing Address": "f1n5jufq5n5gdm3tiycpi3ujqgyh3yyj52rd72vdq",
+          "Created At": "2024-09-02 12:40:15.728000000 UTC",
+          "Message CID": "bafy2bzaceceihmiswyvfqwdpctep6jkxdbn7don7zf2soeox66q54hj2mlgek"
+        }
+      ]
+    }
+  ]
+}
