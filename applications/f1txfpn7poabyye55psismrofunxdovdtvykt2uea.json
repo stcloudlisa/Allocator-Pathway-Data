@@ -35,11 +35,11 @@
     "Weekly Allocation": "500TiB"
   },
   "Lifecycle": {
-    "State": "ReadyToSign",
+    "State": "Granted",
     "Validated At": "2024-10-16 11:32:47.034676636 UTC",
     "Validated By": "stcloudlisa",
     "Active": true,
-    "Updated At": "2024-10-16 11:32:47.034680849 UTC",
+    "Updated At": "2024-10-16 11:38:41.264333370 UTC",
     "Active Request ID": "8caa07d2-9f9e-4807-8ad5-b2715e857f07",
     "On Chain Address": "f1txfpn7poabyye55psismrofunxdovdtvykt2uea",
     "Multisig Address": "true",
@@ -67,9 +67,16 @@
       "Request Type": "Refill",
       "Created At": "2024-10-16 11:32:47.034684583 UTC",
       "Updated At": "2024-10-16 11:32:47.034685393 UTC",
-      "Active": true,
+      "Active": false,
       "Allocation Amount": "512TiB",
-      "Signers": []
+      "Signers": [
+        {
+          "Github Username": "stcloudlisa",
+          "Signing Address": "f1n5jufq5n5gdm3tiycpi3ujqgyh3yyj52rd72vdq",
+          "Created At": "2024-10-16 11:38:39.399000000 UTC",
+          "Message CID": "bafy2bzacea627g5jk7gcyu7a5dp44ovwtcnnjnyrn5moffn3bfy744job3nsu"
+        }
+      ]
     }
   ]
 }
