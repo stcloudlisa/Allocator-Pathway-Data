@@ -35,7 +35,7 @@
     "Weekly Allocation": "500TiB"
   },
   "Lifecycle": {
-    "State": "Granted",
+    "State": "ChangesRequested",
     "Validated At": "2024-10-25 08:40:33.026135910 UTC",
     "Validated By": "stcloudlisa",
     "Active": true,
@@ -43,7 +43,7 @@
     "Active Request ID": "2fdf87ac-af5f-4251-b2e6-26be4e70b9bd",
     "On Chain Address": "f1txfpn7poabyye55psismrofunxdovdtvykt2uea",
     "Multisig Address": "true",
-    "edited": true
+    "edited": false
   },
   "Allocation Requests": [
     {
