@@ -1,0 +1,66 @@
+{
+  "Version": "1.3",
+  "ID": "f1j72645uzsl4o4hxyfqg7fnf4mwz7nhcqjobzv5y",
+  "Issue Number": "18",
+  "Client": {
+    "Name": "ESRF",
+    "Region": "Afghanistan",
+    "Industry": "Life Science / Healthcare",
+    "Website": "https://www.esrf.fr/about",
+    "Social Media": "https://www.esrf.fr/about",
+    "Social Media Type": "Slack",
+    "Role": "Data Preparer"
+  },
+  "Project": {
+    "Brief history of your project and organization": "Our team boasts extensive experience and proficiency in utilizing cutting-edge tools such as go-graphsplit and singularity to ensure efficient and accurate data packaging. We employ proprietary programs to segment, package, and compress client-provided data, ultimately generating ZIP files ranging from 28-32GB in size to align with the storage requirements of the Filecoin network. Through these services, we effectively assist clients in processing and preparing data for storage and usage on the Filecoin network.",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "With a brand-new generation of high-energy synchrotron, the ESRF is the world's brightest X-ray source and a centre of excellence for fundamental and innovation-driven research in condensed and living matter science. \r\n\r\nOn August 2020, the ESRF opened its completely rebuilt x-ray source, ESRF-EBS (Extremely Brilliant Source), the world’s first fourth-generation high-energy synchrotron.\r\n\r\nThe ESRF - The European Synchrotron Radiation Facility - is the most intense source of synchrotron-generated light, producing X-rays 100 billion times brighter than the X-rays used in hospitals. These X-rays, endowed with exceptional properties, are produced at the ESRF by the high energy electrons that race around the storage ring, a circular tunnel measuring 844 metres in circumference.\r\n\r\nThe ESRF was conceived as a true European collaboration for the advancement of X-ray science. In 1988, eleven European countries joined forces to build the world’s most performing and bright « third-generation » light source. This visionary project has made an outstanding contribution to the excellence of European science. Almost thirty years later, a new dream saw the light, with the launch of a brand-new generation of high-energy synchrotron, the ESRF's Extremely Brilliant Source. With the support of ESRF's 21 partner countries, EBS provides scientists from all over the world with new opportunities to pioneer innovative science and to addressing the complex global challenges that our society faces.",
+    "Where was the data currently stored in this dataset sourced from": "AWS Cloud",
+    "How do you plan to prepare the dataset": "No response",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "https://www.esrf.fr/about",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[X] I confirm",
+    "What is the expected retrieval frequency for this data": "Yearly",
+    "For how long do you plan to keep this dataset stored on Filecoin": "1.5 to 2 years",
+    "In which geographies do you plan on making storage deals": "Greater China, Asia other than Greater China, North America, Australia (continent)",
+    "How will you be distributing your data to storage providers": "Cloud storage (i.e. S3), HTTP or FTP server, IPFS, Shipping hard drives",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "f03231154 Hong Kong\r\nf03157905  China\r\nf01025366 China\r\nf09693  China\r\nf01926635 China",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "3PiB",
+    "Single Size Dataset": "500TiB",
+    "Replicas": 6,
+    "Weekly Allocation": "512TiB"
+  },
+  "Lifecycle": {
+    "State": "Granted",
+    "Validated At": "2024-11-18 07:13:31.172877291 UTC",
+    "Validated By": "stcloudlisa",
+    "Active": true,
+    "Updated At": "2024-11-18 07:15:08.759665924 UTC",
+    "Active Request ID": "94ccd93f-b3fc-4cd1-b0b0-e62479a0d8b1",
+    "On Chain Address": "f1j72645uzsl4o4hxyfqg7fnf4mwz7nhcqjobzv5y",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": [
+    {
+      "ID": "94ccd93f-b3fc-4cd1-b0b0-e62479a0d8b1",
+      "Request Type": "First",
+      "Created At": "2024-11-18 07:13:31.172884172 UTC",
+      "Updated At": "2024-11-18 07:13:31.172928532 UTC",
+      "Active": false,
+      "Allocation Amount": "256TiB",
+      "Signers": [
+        {
+          "Github Username": "stcloudlisa",
+          "Signing Address": "f1n5jufq5n5gdm3tiycpi3ujqgyh3yyj52rd72vdq",
+          "Created At": "2024-11-18 07:15:06.113000000 UTC",
+          "Message CID": "bafy2bzacedtfmry2lnljdpisd3kljhbdundm3vtbwnhg3kqdgvzlvpgfaqvnc"
+        }
+      ]
+    }
+  ]
+}
