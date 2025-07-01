@@ -1,0 +1,49 @@
+{
+  "Version": "1.3",
+  "ID": "f1poloshvb2nb3n6d2ox3rk3gxorun7gsemtqiclq",
+  "Issue Number": "33",
+  "Client": {
+    "Name": "DOE's Water Power Technology Office's (WPTO) US Wave dataset",
+    "Region": "United States",
+    "Industry": "Life Science / Healthcare",
+    "Website": "https://registry.opendata.aws/wpto-pds-us-wave/",
+    "Social Media": "https://registry.opendata.aws/wpto-pds-us-wave/",
+    "Social Media Type": "Slack",
+    "Role": "Data Preparer"
+  },
+  "Project": {
+    "Brief history of your project and organization": "Released to the public as part of the Department of Energy's Open Energy Data Initiative, this is the highest resolution publicly available long-term wave hindcast dataset that – when complete – will cover the entire U.S. Exclusive Economic Zone (EEZ).\n\nA technical summary of the dataset is as follows:\n\n32 Year Wave Hindcast (1979-2010), 3-hour temporal resolution\nUnstructured grid spatial resolution ranges from 200 meters in shallow water to ~10 km in deep water\nSpatial coverage: EEZ offshore of all U.S territories (see below)\nThe following variables are included in the dataset:\n\nMean Wave Direction: Direction normal to the wave crests\nSignificant Wave Height: Calculated as the zeroth spectral moment (i.e., H_m0)\nMean Absolute Period: Calculated as a ratio of spectral moments (m_0/m_1)\nPeak Period: The period associated with the maximum value of the wave energy spectrum\nMean Zero-Crossing Period: Calculated as a ratio of spectral moments (sqrt(m_0/m_2))\nEnergy Period: Calculated as a ratio of spectral moments (m_-1/m_0)\nDirectionality Coefficient: Fraction of total wave energy travelling in the direction of maximum wave power\nMaximum Energy Direction: The direction from which the most wave energy is travelling\nOmni-Directional Wave Power: Total wave energy flux from all directions\nSpectral Width: Spectral width characterizes the relative spreading of energy in the wave spectrum",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "Released to the public as part of the Department of Energy's Open Energy Data Initiative, this is the highest resolution publicly available long-term wave hindcast dataset that – when complete – will cover the entire U.S. Exclusive Economic Zone (EEZ).\n\nA technical summary of the dataset is as follows:\n\n32 Year Wave Hindcast (1979-2010), 3-hour temporal resolution\nUnstructured grid spatial resolution ranges from 200 meters in shallow water to ~10 km in deep water\nSpatial coverage: EEZ offshore of all U.S territories (see below)\nThe following variables are included in the dataset:\n\nMean Wave Direction: Direction normal to the wave crests\nSignificant Wave Height: Calculated as the zeroth spectral moment (i.e., H_m0)\nMean Absolute Period: Calculated as a ratio of spectral moments (m_0/m_1)\nPeak Period: The period associated with the maximum value of the wave energy spectrum\nMean Zero-Crossing Period: Calculated as a ratio of spectral moments (sqrt(m_0/m_2))\nEnergy Period: Calculated as a ratio of spectral moments (m_-1/m_0)\nDirectionality Coefficient: Fraction of total wave energy travelling in the direction of maximum wave power\nMaximum Energy Direction: The direction from which the most wave energy is travelling\nOmni-Directional Wave Power: Total wave energy flux from all directions\nSpectral Width: Spectral width characterizes the relative spreading of energy in the wave spectrum",
+    "Where was the data currently stored in this dataset sourced from": "AWS Cloud",
+    "How do you plan to prepare the dataset": "To use rex with HSDS you will need to install h5pyd:\n\npip install h5pyd\nNext you'll need to configure HSDS:\n\nhsconfigure\nand enter at the prompt:\n\nhs_endpoint = https://developer.nrel.gov/api/hsds\nhs_username =\nhs_password =\nhs_api_key = 3K3JQbjZmWctY0xmIfSYvYgtIcM3CN0cb1Y2w9bf\nIMPORTANT: The example API key here is for demonstation and is rate-limited per IP. To get your own API key, visit https://developer.nrel.gov/signup/\n\nYou can also add the above contents to a configuration file at ~/.hscfg\n\nfrom rex import ResourceX\n\nwave_file = '/nrel/US_wave/West_Coast/West_Coast_wave_2010.h5'\nwith ResourceX(wave_file, hsds=True) as f:\n    meta = f.meta\n    time_index = f.time_index\n    swh = f['significant_wave_height']\nrex also allows easy extraction of the nearest site to a desired (lat, lon) location:\n\nfrom rex import ResourceX\n\nwave_file = '/nrel/US_wave/West_Coast/West_Coast_wave_2010.h5'\nlat_lon = (34.399408, -119.841181)\nwith ResourceX(wave_file, hsds=True) as f:\n    lat_lon_swh = f.get_lat_lon_df('significant_wave_height', lat_lon)\nor to extract all sites in a given region:\n\nfrom rex import ResourceX\n\nwave_file = '/nrel/US_wave/West_Coast/West_Coast_wave_2010.h5'\njurisdication='California'\nwith ResourceX(wave_file, hsds=True) as f:\n    ca_swh = f.get_region_df('significant_wave_height', jurisdiction,\n                             region_col='jurisdiction')\nIf you would rather access the US Wave data directly using h5pyd:\n\n# Extract the average wave height\nimport h5pyd\nimport pandas as pd\n\n# Open .h5 file\nwith h5pyd.File('/nrel/US_wave/West_Coast/West_Coast_wave_2010.h5', mode='r') as f:\n    # Extract meta data and convert from records array to DataFrame\n    meta = pd.DataFrame(f['meta'][...])\n    # Significant Wave Height\n    swh = f['significant_wave_height']\n    # Extract scale factor\n    scale_factor = swh.attrs['scale_factor']\n    # Extract, average, and unscale wave height\n    mean_swh = swh[...].mean(axis=0) / scale_factor\n\n# Add mean wave height to meta data\nmeta['Average Wave Height'] = mean_swh\n# Extract time-series data for a single site\nimport h5pyd\nimport pandas as pd\n\n# Open .h5 file\nwith h5pyd.File('/nrel/US_wave/West_Coast/West_Coast_wave_2010.h5', mode='r') as f:\n    # Extract time_index and convert to datetime\n    # NOTE: time_index is saved as byte-strings and must be decoded\n    time_index = pd.to_datetime(f['time_index'][...].astype(str))\n    # Initialize DataFrame to store time-series data\n    time_series = pd.DataFrame(index=time_index)\n    # Extract wave height, direction, and period\n    for var in ['significant_wave_height', 'mean_wave_direction',\n                'mean_absolute_period']:\n    \t# Get dataset\n    \tds = f[var]\n    \t# Extract scale factor\n    \tscale_factor = ds.attrs['scale_factor']\n    \t# Extract site 100 and add to DataFrame\n    \ttime_series[var] = ds[:, 100] / scale_factor",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "s3://wpto-pds-US_wave/v1.0.0/${domain}\ns3://wpto-pds-US_wave/v1.0.0/virtual_buoy/${domain}",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[x] I confirm",
+    "What is the expected retrieval frequency for this data": "Monthly",
+    "For how long do you plan to keep this dataset stored on Filecoin": "1.5 to 2 years",
+    "In which geographies do you plan on making storage deals": "Asia other than Greater China, North America, South America",
+    "How will you be distributing your data to storage providers": "Cloud storage (i.e. S3)",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "3",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "800TiB",
+    "Single Size Dataset": "80TiB",
+    "Replicas": 10,
+    "Weekly Allocation": "512TiB"
+  },
+  "Lifecycle": {
+    "State": "Submitted",
+    "Validated At": "",
+    "Validated By": "",
+    "Active": true,
+    "Updated At": "2025-07-01 08:13:11.635103713 UTC",
+    "Active Request ID": "",
+    "On Chain Address": "f1poloshvb2nb3n6d2ox3rk3gxorun7gsemtqiclq",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": []
+}
