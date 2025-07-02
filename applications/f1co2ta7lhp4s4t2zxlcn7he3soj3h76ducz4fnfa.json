@@ -1,0 +1,66 @@
+{
+  "Version": "1.3",
+  "ID": "f1co2ta7lhp4s4t2zxlcn7he3soj3h76ducz4fnfa",
+  "Issue Number": "37",
+  "Client": {
+    "Name": "Louisiana Watershed Initiative (LWI) Model Data",
+    "Region": "United States",
+    "Industry": "Life Science / Healthcare",
+    "Website": "https://registry.opendata.aws/lwi-model-data/",
+    "Social Media": "https://registry.opendata.aws/lwi-model-data/",
+    "Social Media Type": "Other",
+    "Role": "Data Preparer"
+  },
+  "Project": {
+    "Brief history of your project and organization": "Geographic (land cover, land elevation, etc.), meteorologic (pluvial, wind, etc.), hydrologic (fluvial, tidal, etc.), hydrodynamic (water surface elevations, flow velocities), and built environment (structures, levees, floodgates, culverts) data used as inputs to and outputs from numerical modeling software for the prediction of flood risk in stochastic and probabilistic frameworks. This data was collected from open sources, such as from the National Oceanographic and Atmospheric Administration (NOAA) or the United States Geological Survey (USGS). The format of these data is modified to suit the needs of the modeling program and software, and then used to predict flooding in Louisiana across a range of scenarios. The modeling software used to predict flooding which utilizes and creates this data is freely available from the United States Army Corps of Engineers Hydrologic Engineering Center’s Hydrologic Modeling System (HEC-HMS) and River Analysis System (HEC-RAS). All data is made public by the State of Louisiana for the benefit of its citizens. This flood prediction data can be used by federal, state, and local decision makers as well as private citizens to assess the flood risk they face and make sound science-based decisions for response and adaptation.",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "Geographic (land cover, land elevation, etc.), meteorologic (pluvial, wind, etc.), hydrologic (fluvial, tidal, etc.), hydrodynamic (water surface elevations, flow velocities), and built environment (structures, levees, floodgates, culverts) data used as inputs to and outputs from numerical modeling software for the prediction of flood risk in stochastic and probabilistic frameworks. This data was collected from open sources, such as from the National Oceanographic and Atmospheric Administration (NOAA) or the United States Geological Survey (USGS). The format of these data is modified to suit the needs of the modeling program and software, and then used to predict flooding in Louisiana across a range of scenarios. The modeling software used to predict flooding which utilizes and creates this data is freely available from the United States Army Corps of Engineers Hydrologic Engineering Center’s Hydrologic Modeling System (HEC-HMS) and River Analysis System (HEC-RAS). All data is made public by the State of Louisiana for the benefit of its citizens. This flood prediction data can be used by federal, state, and local decision makers as well as private citizens to assess the flood risk they face and make sound science-based decisions for response and adaptation.",
+    "Where was the data currently stored in this dataset sourced from": "AWS Cloud",
+    "How do you plan to prepare the dataset": "Resources on AWS\nDescription\nModel Applications and Simulations\nResource type\nS3 Bucket\nAmazon Resource Name (ARN)\narn:aws:s3:::lwi-model-data\nAWS Region\nus-east-1\nAWS CLI Access (No AWS account required)\naws s3 ls --no-sign-request s3://lwi-model-data/",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "https://registry.opendata.aws/lwi-model-data/",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[x] I confirm",
+    "What is the expected retrieval frequency for this data": "Yearly",
+    "For how long do you plan to keep this dataset stored on Filecoin": "2 to 3 years",
+    "In which geographies do you plan on making storage deals": "Asia other than Greater China, Greater China",
+    "How will you be distributing your data to storage providers": "Cloud storage (i.e. S3), Shipping hard drives",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "f02363305 HK\nf02829749 HK\nf02934869 HK\nf02934879 HK\nf03529412 Germany\nf03528948 HK\nf03528979 HK",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "900TiB",
+    "Single Size Dataset": "128TiB",
+    "Replicas": 7,
+    "Weekly Allocation": "512TiB"
+  },
+  "Lifecycle": {
+    "State": "Granted",
+    "Validated At": "2025-07-02 14:43:32.601656094 UTC",
+    "Validated By": "stcloudlisa",
+    "Active": true,
+    "Updated At": "2025-07-02 14:43:32.601652665 UTC",
+    "Active Request ID": "332b2a6c-00d7-480f-9d2f-d39e4e2b9b9c",
+    "On Chain Address": "f1co2ta7lhp4s4t2zxlcn7he3soj3h76ducz4fnfa",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": [
+    {
+      "ID": "332b2a6c-00d7-480f-9d2f-d39e4e2b9b9c",
+      "Request Type": "First",
+      "Created At": "2025-07-02 14:41:28.717030818 UTC",
+      "Updated At": "2025-07-02 14:41:28.717031789 UTC",
+      "Active": false,
+      "Allocation Amount": "281474976710656 B",
+      "Signers": [
+        {
+          "Github Username": "stcloudlisa",
+          "Signing Address": "f1n5jufq5n5gdm3tiycpi3ujqgyh3yyj52rd72vdq",
+          "Created At": "2025-07-02 14:43:31.204000000 UTC",
+          "Message CID": "bafy2bzaceck5ry23ox3agidg5wqrhsgkb22wsn4zu7t5r27bnebmvltqebmii"
+        }
+      ]
+    }
+  ]
+}
