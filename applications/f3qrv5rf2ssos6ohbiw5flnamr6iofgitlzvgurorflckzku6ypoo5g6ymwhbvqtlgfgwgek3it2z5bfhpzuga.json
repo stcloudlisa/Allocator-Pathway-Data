@@ -1,0 +1,49 @@
+{
+  "Version": "1.3",
+  "ID": "f3qrv5rf2ssos6ohbiw5flnamr6iofgitlzvgurorflckzku6ypoo5g6ymwhbvqtlgfgwgek3it2z5bfhpzuga",
+  "Issue Number": "39",
+  "Client": {
+    "Name": "Tianyi Cloud Data",
+    "Region": "China",
+    "Industry": "IT & Technology Services",
+    "Website": "https://tianyi.art/",
+    "Social Media": "https://tianyi.art/",
+    "Social Media Type": "Other",
+    "Role": "Data Preparer"
+  },
+  "Project": {
+    "Brief history of your project and organization": "Tianyi, headquartered in Shenzhen, is a company passionate about design and developing innovative digital products and services. Its partners span Southeast Asia, the Middle East, and Asia.\nFounded in 2018, Tianyi specializes in mobile internet software development, enterprise office ERP, and the integration of various complex business processes. Its low-code office system is designed for rapid deployment and deployment of customized enterprise services. Tianyi also designs and develops blockchain technology solutions, including blockchain web wallets, NFT solutions, and blockchain \"alliance chain\" technology development and integration. The company also provides IDC data center services, CDN acceleration for enterprise products, and professional internet access networking technology, including DDOS and CC attack defense systems, high-bandwidth dedicated internet access and defense services, as well as enterprise SD-WAN acceleration, SD-WAN networking, and cloud dedicated line services.",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "Tianyi, headquartered in Shenzhen, is a company passionate about design and developing innovative digital products and services. Its partners span Southeast Asia, the Middle East, and Asia.\nFounded in 2018, Tianyi specializes in mobile internet software development, enterprise office ERP, and the integration of various complex business processes. Its low-code office system is designed for rapid deployment and deployment of customized enterprise services. Tianyi also designs and develops blockchain technology solutions, including blockchain web wallets, NFT solutions, and blockchain \"alliance chain\" technology development and integration. The company also provides IDC data center services, CDN acceleration for enterprise products, and professional internet access networking technology, including DDOS and CC attack defense systems, high-bandwidth dedicated internet access and defense services, as well as enterprise SD-WAN acceleration, SD-WAN networking, and cloud dedicated line services.",
+    "Where was the data currently stored in this dataset sourced from": "My Own Storage Infra",
+    "How do you plan to prepare the dataset": "Resources on my own ceph filesystem\n\nDescription\nOnline shopping mall data\n\nResource type\nCeph Object Storage\n\nSynchronization Tools\nrsync",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "https://www.alipan.com/s/N8im6CHJ56Z",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[x] I confirm",
+    "What is the expected retrieval frequency for this data": "Yearly",
+    "For how long do you plan to keep this dataset stored on Filecoin": "1.5 to 2 years",
+    "In which geographies do you plan on making storage deals": "Greater China, Asia other than Greater China",
+    "How will you be distributing your data to storage providers": "HTTP or FTP server",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "f02363305 HK\nf02829749 HK\nf02934869 HK\nf02934879 HK\nf03529412 Germany\nf03528948 HK\nf03528979 HK",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "900TiB",
+    "Single Size Dataset": "128TiB",
+    "Replicas": 7,
+    "Weekly Allocation": "512TiB"
+  },
+  "Lifecycle": {
+    "State": "Submitted",
+    "Validated At": "",
+    "Validated By": "",
+    "Active": true,
+    "Updated At": "2025-07-31 04:05:10.538675084 UTC",
+    "Active Request ID": "",
+    "On Chain Address": "f3qrv5rf2ssos6ohbiw5flnamr6iofgitlzvgurorflckzku6ypoo5g6ymwhbvqtlgfgwgek3it2z5bfhpzuga",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": []
+}
