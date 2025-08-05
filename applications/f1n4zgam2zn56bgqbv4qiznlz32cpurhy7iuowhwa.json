@@ -1,0 +1,49 @@
+{
+  "Version": "1.3",
+  "ID": "f1n4zgam2zn56bgqbv4qiznlz32cpurhy7iuowhwa",
+  "Issue Number": "42",
+  "Client": {
+    "Name": "Indiana Statewide Elevation Catalog",
+    "Region": "Afghanistan",
+    "Industry": "Life Science / Healthcare",
+    "Website": "https://registry.opendata.aws/in-elevation/",
+    "Social Media": "https://registry.opendata.aws/in-elevation/",
+    "Social Media Type": "Slack",
+    "Role": "Data Preparer"
+  },
+  "Project": {
+    "Brief history of your project and organization": "The State of Indiana Geographic Information Office and IOT Office of Technology manage a series of digital LiDAR LAS files stored in AWS, dating back to the 2011-2013 collection and including the NRCS-funded 2016-2020 collection. These LiDAR datasets are available as uncompressed LAS files, for cloud storage and access. Each year's data is organized into a tile grid scheme covering the entire geography of Indiana, ensuring easy access and efficient processing. The tiles' naming reflects each tile's lower left coordinate, facilitating accurate data management and retrieval. The AWS storage solution ensures that these extensive datasets are readily accessible for analysis and application across various projects.",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "The State of Indiana Geographic Information Office and IOT Office of Technology manage a series of digital LiDAR LAS files stored in AWS, dating back to the 2011-2013 collection and including the NRCS-funded 2016-2020 collection. These LiDAR datasets are available as uncompressed LAS files, for cloud storage and access. Each year's data is organized into a tile grid scheme covering the entire geography of Indiana, ensuring easy access and efficient processing. The tiles' naming reflects each tile's lower left coordinate, facilitating accurate data management and retrieval. The AWS storage solution ensures that these extensive datasets are readily accessible for analysis and application across various projects.",
+    "Where was the data currently stored in this dataset sourced from": "AWS Cloud",
+    "How do you plan to prepare the dataset": "",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "Resources on AWS\nDescription\nState of Indiana Elevation archive.\nResource type\nS3 Bucket\nAmazon Resource Name (ARN)\narn:aws:s3:::giselevationingov\nAWS Region\nus-east-2\nAWS CLI Access (No AWS account required)\naws s3 ls --no-sign-request s3://giselevationingov/",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[x] I confirm",
+    "What is the expected retrieval frequency for this data": "Yearly",
+    "For how long do you plan to keep this dataset stored on Filecoin": "1.5 to 2 years",
+    "In which geographies do you plan on making storage deals": "Greater China, Asia other than Greater China",
+    "How will you be distributing your data to storage providers": "HTTP or FTP server, Shipping hard drives, IPFS",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "f03601451 Hong Kong\nf03609158 Hong Kong\nf02826762 Hong Kong\nf02827135 Hong Kong\nf02827010 XinJiang\nf02825281 XinJiang\nf03623232 HongKong\nf03610683 HongKong",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "300TiB",
+    "Single Size Dataset": "35TiB",
+    "Replicas": 8,
+    "Weekly Allocation": "100TiB"
+  },
+  "Lifecycle": {
+    "State": "Submitted",
+    "Validated At": "",
+    "Validated By": "",
+    "Active": true,
+    "Updated At": "2025-08-05 10:08:00.160189122 UTC",
+    "Active Request ID": "",
+    "On Chain Address": "f1n4zgam2zn56bgqbv4qiznlz32cpurhy7iuowhwa",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": []
+}
